@@ -27,7 +27,7 @@ pacman -Syuu
 pacman -S git
 ```
 
-## Install Build tools (updateed toolchain and cmake)
+## Install Build tools (updated toolchain and cmake)
 
 ```bash
 pacman -S mingw-w64-i686-toolchain \
