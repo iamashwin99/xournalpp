@@ -5,7 +5,7 @@ LUA_MAJOR=5.3
 LUA_VERSION=5.3.5
 LUA_CHECKSUM=112eb10ff04d1b4c9898e121d6bdf54a81482447
 
-PREFIX=/mingw64
+PREFIX=/mingw32
 
 printf "Downloading Lua ${LUA_VERSION}\n"
 rm -f lua-${LUA_VERSION}.tar.gz
@@ -32,7 +32,7 @@ FILE="./lua_makefile.patch"
 +++ Makefile.new	2019-06-14 16:45:44.036566000 +0200
 @@ -13 +13 @@
 -INSTALL_TOP= /usr/local
-+INSTALL_TOP= /mingw64
++INSTALL_TOP= /mingw32
 EOM
 patch Makefile lua_makefile.patch
 rm lua_makefile.patch
