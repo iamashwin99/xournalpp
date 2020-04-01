@@ -1,11 +1,11 @@
 # Xournal++ Windows Build
 
-![Screenshot](main-win.png?raw=true "Xournal++ Screenshot on Win10")
+
 
 ## Preparation
 1. Install [MSYS2](https://www.msys2.org/) to a short path without spaces.
 2. Install [NSIS](https://nsis.sourceforge.io/Download) to the standard directory.
-3. Start Mingw-w64 64bit. (Always check if it says **MINGW64** - not 32bit and not MSYS2)
+3. Start Mingw-w32 32bit. (Always check if it says **MINGW32** - not 64bit and not MSYS2)
 
 This will open a console. All following steps happen in this console.
 
@@ -25,24 +25,26 @@ pacman -S git
 ## Install Build tools
 
 ```bash
-pacman -S mingw-w64-x86_64-toolchain \
-          mingw-w64-x86_64-cmake \
-          mingw-w64-x86_64-make \
-          mingw-w64-x86_64-ninja \
+pacman -S mingw-w64-i686-toolchain \
+          mingw-w64-i686-cmake \
+          mingw-w64-i686-make \
+          mingw-w64-i686-ninja \
           patch \
           make \
           tar \
-          mingw-w64-x86_64-cppunit
+          mingw-w64-i686-cppunit
 ```
+note that its -i686- and not -x86_64-
+
 -> press enter multiple times / confirm all default values
 
 ## Install dependencies
 
 ```bash
-pacman -S mingw-w64-x86_64-poppler \
-          mingw-w64-x86_64-gtk3 \
-          mingw-w64-x86_64-libsndfile \
-          mingw-w64-x86_64-libzip
+pacman -S mingw-w64-i686-poppler \
+          mingw-w64-i686-gtk3 \
+          mingw-w64-i686-libsndfile \
+          mingw-w64-i686-libzip
 ```
 -> press enter multiple times / confirm all default values
 
@@ -62,7 +64,7 @@ windows-setup/build-portaudio.sh
 
 ### Install Lua
 
-Build/Install lua with
+Build/Install lua with ( please note that this file is changed from the 64bit one)
 ```bash
 windows-setup/build-lua.sh
 ```
