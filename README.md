@@ -4,7 +4,7 @@ This is an attempt at 32bit version of the xournalpp, for the original one pleas
 
 Thanks to [andreasb242](https://github.com/andreasb242) I have been able to do the following.
 
-Follow build setup from [here](https://github.com/iamashwin99/xournalpp/edit/master/readme/WindowsBuild.md)
+Follow build setup from [here](https://github.com/iamashwin99/xournalpp/blob/master/readme/WindowsBuild.md)
 or as follows:
 
 ## Preparation
